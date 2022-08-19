@@ -1,0 +1,43 @@
+.Header{
+    height: 200px;
+    background-color: #6aa84f;
+    border: 3px solid black;
+}
+
+
+.Navigation{
+    height: 650px;
+    width: 400px;
+    background-color: #6fa8dc;
+    margin-top: 2%;
+    margin-right: 2%;
+    border: 3px solid black;
+
+}
+
+.Main{
+    display: flex;
+    flex-direction: column;
+    width: 1600px; 
+    background-color: #e06666;
+    border: 3px solid black;
+    margin-top: 40px;
+
+}
+
+.SubContents{
+    height: 550px;
+    width: 485px;
+    background-color: #ffd966;
+    margin-top: 2%;
+    margin-left: 2%;
+    border: 3px solid black;
+}
+
+.Advertisement {
+    height: 120px;
+    width: 1530px;
+    background-color: #b4a7d6;
+    margin: 2%;
+    border: 3px solid black;
+}

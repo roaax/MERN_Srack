@@ -1,0 +1,19 @@
+.App {
+  border: 3px black solid;
+  width: 2000px;
+  background-color: #dddddd;
+  margin: 5% auto;
+  padding: 30px;
+}
+
+.center{
+  display: flex;
+}
+.red{
+  display: flex;
+  flex-direction: column;
+}
+
+.yellow{
+  display: flex;
+}
