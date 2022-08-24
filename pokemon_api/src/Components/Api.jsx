@@ -8,9 +8,8 @@ const Api=()=>{
     const[state, setState]=useState([]);
     const add=()=>{
         fetch('https://pokeapi.co/api/v2/pokemon/?limit=807')
-            .then(response=>{
-                return response.json()
-            }).then(response=>{setState(response.results);
+            .then(response=>{return response.json()})
+            .then(response=>{setState(response.results);
             })}
     return(
         <div className="container shadow-lg ">
