@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default () => {
+const ProductForm = (props) => {
     //keep track of what is being typed via useState hook
     const [title, setTitle] = useState(""); 
     const [price, setPrice] = useState("");
@@ -17,13 +17,23 @@ export default () => {
             price,
             description
         })
-            .then(res=>console.log(res))
+            .then(()=>{
+                axios.get('http://localhost:8000/api/product')
+                .then(res => {
+                    //set and refresh the page 
+                    props.sendTrigger(res.data)
+                })
+            })
             .catch(err=>console.log(err))
     }
     //onChange to update title , price and description
+
+    /*----------------------------
+            Product Form
+    ----------------------------*/
     return (
         <form onSubmit={onSubmitHandler}>
-            <div className='container m-4 p-4 shadow-sm align-center'>
+            <div className='container p-4 shadow-lg text-center'>
                 <h1 className='text-dark m-4'>Product Manager</h1>
             <p>
                 <label className='m-2'>Title </label>
@@ -42,4 +52,5 @@ export default () => {
         </form>
     )
 }
+export default ProductForm;
 
